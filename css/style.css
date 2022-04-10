@@ -38,7 +38,7 @@ p {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .list {
@@ -274,16 +274,17 @@ p {
   line-height: 1.625;
   border-radius: 4px;
 }
+
 .button:hover,
 .button:focus {
   background-color: var(--accent-text-color);
   color: var(--header-bg-color);
 }
-.button-nav {
-}
+
 .nav-projects > .item {
   background-color: var(--comand-bg-color);
 }
+
 .button-primary {
   background-color: var(--accent-text-color);
   color: var(--header-bg-color);
@@ -293,28 +294,33 @@ p {
   line-height: 1.875;
   border-radius: 4px;
 }
+
 .button-primary:hover,
 .button-primary:focus {
   background-color: var(--header-bg-color);
   color: var(--accent-text-color);
 }
+
 /*Низ*/
 .footer-bg {
   background-color: var(--footer-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .footer-list-adress {
   color: var(--header-bg-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
+
 .footer-list-contacts {
   font-style: normal;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
 }
+
 .web-logo-fr {
   display: inline-block;
 
@@ -327,6 +333,7 @@ p {
   text-decoration: none;
 }
 
+
 .studio-logo-footer {
   color: var(--header-bg-color);
   font-family: "Raleway";
@@ -335,9 +342,12 @@ p {
   line-height: 1.2;
   text-decoration: none;
 }
+
 .footer-adress {
   margin-top: 20px;
 }
+
 .invisible-header {
   display: none;
 }
+
