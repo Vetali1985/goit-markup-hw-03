@@ -8,6 +8,7 @@
   --logo-text-studio: #000000;
   --footer-bg-color: #2f303a;
   --border-color: #eeeeee;
+  --comand-bg-color: #f5f4fa;
 }
 
 /*Основные*/
@@ -37,7 +38,7 @@ p {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid tomato; */
+  outline: 2px solid tomato;
 }
 
 .list {
@@ -50,11 +51,9 @@ p {
 /*Шапка*/
 .header {
   background-color: var(--header-bg-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .web-logo {
-  margin-top: 24px;
-  margin-bottom: 25px;
-  /* margin-left: 215px; */
   display: inline-block;
 
   color: var(--accent-text-color);
@@ -119,11 +118,10 @@ p {
 .nav-head {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
 }
 .nav-projects {
   display: flex;
-  padding-bottom: 34px;
+  padding-bottom: 50px;
   justify-content: center;
 }
 .nav-projects > .item {
@@ -137,15 +135,22 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .centered {
   text-align: center;
 }
 .hero {
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--footer-bg-color);
 }
 .section-title-main {
   margin-bottom: 30px;
-  color: var(--title-text-color);
+  color: var(--header-bg-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -154,13 +159,19 @@ p {
 }
 
 .advantage {
-  width: 1200px;
-  /* padding-left: 15px;
-  padding-right: 15px; */
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -30px;
+}
+
+.card-text {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 .flex-container {
   display: flex;
@@ -169,15 +180,15 @@ p {
 .flex-container-comand {
 }
 .flex-element-comand {
-  width: 270px;
   margin-right: 30px;
-  margin-bottom: 30px;
-  margin-top: 30px;
 }
 .flex-element-comand:nth-child(n + 4) {
   margin-right: 0;
 }
 
+.comand {
+  background-color: var(--comand-bg-color);
+}
 .flex-element {
   width: 270px;
   margin-right: 30px;
@@ -187,11 +198,11 @@ p {
 }
 
 .flex-element-work {
-  width: 370px;
   margin-right: 30px;
-  margin-bottom: 30px;
   margin-top: 30px;
-  border-bottom: 1px solid var(--border-color);
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .flex-element-work:nth-child(3n) {
   margin-right: 0;
@@ -210,11 +221,11 @@ p {
   text-transform: uppercase;
 }
 .section-text-studio {
-  padding-bottom: 94px;
   color: var(--primary-text-color);
   line-height: 1.71;
 }
 .section-title-progects {
+  padding-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   font-weight: 700;
@@ -227,7 +238,6 @@ p {
   line-height: 1.875;
 }
 .section-title-block {
-  padding-top: 94px;
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -241,11 +251,13 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 .section-text-comand {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
 
 .section-text {
@@ -254,9 +266,8 @@ p {
 
 /*Buton*/
 .button {
-  margin-top: 94px;
   color: var(--title-text-color);
-  background-color: var(--header-bg-color);
+  background-color: var(--comand-bg-color)
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -270,11 +281,13 @@ p {
 }
 .button-nav {
 }
+.nav-projects > .item {
+  background-color: var(--comand-bg-color);
+}
 .button-primary {
   background-color: var(--accent-text-color);
   color: var(--header-bg-color);
   border-color: var(--accent-text-color);
-  margin-bottom: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -288,6 +301,8 @@ p {
 /*Низ*/
 .footer-bg {
   background-color: var(--footer-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-list-adress {
   color: var(--header-bg-color);
@@ -296,8 +311,32 @@ p {
   line-height: 1.71;
 }
 .footer-list-contacts {
+  font-style: normal;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+}
+.web-logo-fr {
+  display: inline-block;
+
+  color: var(--accent-text-color);
+
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.studio-logo-footer {
+  color: var(--header-bg-color);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.footer-adress {
+  margin-top: 20px;
 }
 .invisible-header {
   display: none;
