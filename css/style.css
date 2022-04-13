@@ -10,6 +10,11 @@
   --border-color: #eeeeee;
   --comand-bg-color: #f5f4fa;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+}
 
 /*Основные*/
 body {
@@ -110,7 +115,7 @@ p {
 }
 .auth-nav {
   display: flex;
-  margin-left: 331px;
+  margin-left: auto;
 }
 .auth-nav .item + .item {
   margin-left: 50px;
@@ -121,7 +126,7 @@ p {
 }
 .nav-projects {
   display: flex;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 .nav-projects > .item {
@@ -149,7 +154,8 @@ p {
   background-color: var(--footer-bg-color);
 }
 .section-title-main {
-  margin-bottom: 30px;
+  width: 696px;
+  margin: 0 auto;
   color: var(--header-bg-color);
   font-weight: 900;
   font-size: 44px;
@@ -163,12 +169,21 @@ p {
   flex-wrap: wrap;
   margin-right: -30px;
   margin-top: -30px;
+  padding: 0;
+
+}
+.advantage-studio {
+  display: flex;
+  justify-content: space-between;
+}
+.advantage-studio-work{
+  padding-top: 0;
 }
 
 .card-text {
-  margin-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 30px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -191,18 +206,16 @@ p {
 }
 .flex-element {
   width: 270px;
-  margin-right: 30px;
 }
 .flex-element:nth-child(n + 4) {
   margin-right: 0;
 }
 
 .flex-element-work {
+  flex-basis: calc((100%-60px)/3);
   margin-right: 30px;
   margin-top: 30px;
-  display: block;
-  max-width: 100%;
-  height: auto;
+  
 }
 .flex-element-work:nth-child(3n) {
   margin-right: 0;
@@ -212,7 +225,6 @@ p {
 }
 
 .section-title-studio {
-  padding-top: 94px;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-size: 14px;
@@ -225,7 +237,7 @@ p {
   line-height: 1.71;
 }
 .section-title-progects {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   font-weight: 700;
@@ -286,6 +298,15 @@ p {
 }
 
 .button-primary {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
   background-color: var(--accent-text-color);
   color: var(--header-bg-color);
   border-color: var(--accent-text-color);
@@ -313,12 +334,14 @@ p {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  margin-bottom: 9px;
 }
 
 .footer-list-contacts {
   font-style: normal;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 9px;
 }
 
 .web-logo-fr {
@@ -345,6 +368,10 @@ p {
 
 .footer-adress {
   margin-top: 20px;
+}
+.footer-list-contacts{
+  display: block;
+  margin-bottom: 9px;
 }
 
 .invisible-header {
