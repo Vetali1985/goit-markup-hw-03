@@ -24,6 +24,11 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 a {
   text-decoration: none;
 }
@@ -148,7 +153,10 @@ p {
   text-align: center;
 }
 .hero {
+  background-image: url(../images/bg-image.png);
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--footer-bg-color);
@@ -169,8 +177,6 @@ p {
   flex-wrap: wrap;
   margin-right: -30px;
   margin-top: -30px;
-  padding: 0;
-
 }
 .advantage-studio {
   display: flex;
@@ -181,9 +187,10 @@ p {
 }
 
 .card-text {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 30px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -195,6 +202,10 @@ p {
 .flex-container-comand {
 }
 .flex-element-comand {
+      background: #FFFFFF;
+    /* material shadow v1 */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
 }
 .flex-element-comand:nth-child(n + 4) {
@@ -212,9 +223,8 @@ p {
 }
 
 .flex-element-work {
- flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
-  margin-top: 30px;
   
 }
 .flex-element-work:nth-child(3n) {
@@ -270,6 +280,7 @@ p {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .section-text {
@@ -285,9 +296,19 @@ p {
   font-size: 16px;
   line-height: 1.625;
   border-radius: 4px;
-    border-color: transparent;
+  border-color: transparent;
 }
+.btn-projects{
+background-color: var(--comand-bg-color);
+color: var(--title-text-color);
+border-radius: 4px;
+}
+.btn-projects:hover,
+.btn-projects:focus{
+  background-color: var(--accent-text-color);
+  color: var(--header-bg-color);
 
+}
 .button:hover,
 .button:focus {
   background-color: var(--accent-text-color);
@@ -295,10 +316,9 @@ p {
   
 }
 
-
-.nav-projects > .item {
+/* .nav-projects > .item {
   background-color: var(--comand-bg-color);
-}
+} */
 
 .button-primary {
   display: flex;
@@ -377,9 +397,11 @@ p {
   display: block;
   margin-bottom: 9px;
 }
+.tel {
+  margin-bottom: 0;
+}
 
 .invisible-header {
   display: none;
 }
 
-dfff';d
