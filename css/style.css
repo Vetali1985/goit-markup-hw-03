@@ -9,6 +9,7 @@
   --footer-bg-color: #2f303a;
   --border-color: #eeeeee;
   --comand-bg-color: #f5f4fa;
+  --hero-bg-color:#C4C4C4;
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -81,11 +82,31 @@ p {
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-right: 25px;
 }
 .logo .studio-logo:hover,
 .logo .studio-logo:focus {
   color: var(--accent-text-color);
   text-decoration: none;
+}
+.icon-header{
+    display: inline-block;
+    
+
+}
+.site-nav>.item{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.auth-nav>.item{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .site-nav .link {
   color: var(--title-text-color);
@@ -96,6 +117,7 @@ p {
 .site-nav {
   display: flex;
   margin-left: 93px;
+  
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
@@ -153,13 +175,14 @@ p {
   text-align: center;
 }
 .hero {
+  background-color: var(--hero-bg-color);
   background-image: url(../images/bg-image.png);
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--footer-bg-color);
+ 
 }
 .section-title-main {
   width: 696px;
@@ -218,6 +241,31 @@ p {
 .flex-element {
   width: 270px;
 }
+.flex-element::before{
+  content: " ";
+  display: block;
+  height: 120px;
+  background-color: var(--comand-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+  outline: 1px solid black;
+}
+.icon-antenna::before{
+background-image: url(../icon/antenna.svg);
+}
+.icon-clock::before{
+background-image: url(../icon/clock.svg);
+}
+.icon-diagram::before{
+background-image: url(../icon/diagram.svg);
+}
+.icon-astronaut::before{
+background-image: url(../icon/astronaut.svg);
+}
+
+
+
 .flex-element:nth-child(n + 4) {
   margin-right: 0;
 }
@@ -225,6 +273,7 @@ p {
 .flex-element-work {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
+  margin-top: 30px;
   
 }
 .flex-element-work:nth-child(3n) {
@@ -280,7 +329,7 @@ p {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .section-text {
@@ -302,6 +351,10 @@ p {
 background-color: var(--comand-bg-color);
 color: var(--title-text-color);
 border-radius: 4px;
+padding-top: 6px;
+padding-bottom: 6px;
+padding-left: 22px;
+padding-right: 22px;
 }
 .btn-projects:hover,
 .btn-projects:focus{
