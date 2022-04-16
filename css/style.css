@@ -10,6 +10,7 @@
   --border-color: #eeeeee;
   --comand-bg-color: #f5f4fa;
   --hero-bg-color:#C4C4C4;
+  --customers-border-color:#AFB1B8;
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -92,27 +93,29 @@ p {
   text-decoration: none;
 }
 .icon-header{
-    display: inline-block;
-    
-
-}
+    display: inline-block;   
+  }
+  .nav-flex{
+    display: flex;
+    align-items: center;
+  }
 .site-nav>.item{
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+
 }
 .auth-nav>.item{
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+
 }
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .site-nav {
   display: flex;
@@ -176,14 +179,28 @@ p {
 }
 .hero {
   background-color: var(--hero-bg-color);
-  background-image: url(../images/bg-image.png);
+  
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
- 
+background: rgba(47, 48, 58, 0.4);
+} 
+ .overlay{
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-position: center; 
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-image.png); 
 }
+
 .section-title-main {
   width: 696px;
   margin: 0 auto;
@@ -238,33 +255,9 @@ p {
 .comand {
   background-color: var(--comand-bg-color);
 }
-.flex-element {
+ .flex-element {
   width: 270px;
-}
-.flex-element::before{
-  content: " ";
-  display: block;
-  height: 120px;
-  background-color: var(--comand-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-  outline: 1px solid black;
-}
-.icon-antenna::before{
-background-image: url(../icon/antenna.svg);
-}
-.icon-clock::before{
-background-image: url(../icon/clock.svg);
-}
-.icon-diagram::before{
-background-image: url(../icon/diagram.svg);
-}
-.icon-astronaut::before{
-background-image: url(../icon/astronaut.svg);
-}
-
-
+} 
 
 .flex-element:nth-child(n + 4) {
   margin-right: 0;
@@ -273,7 +266,6 @@ background-image: url(../icon/astronaut.svg);
 .flex-element-work {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
-  margin-top: 30px;
   
 }
 .flex-element-work:nth-child(3n) {
@@ -398,7 +390,40 @@ padding-right: 22px;
   background-color: var(--header-bg-color);
   color: var(--accent-text-color);
 }
-
+.customers-title{
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1,1719;
+  text-align: center;
+}
+.customers-list{
+  display: flex;
+}
+ .customers-img{
+  flex-wrap: nowrap;
+  display: block;
+  margin-top: 50px;
+  margin-right: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px; 
+  padding-left: 32px; 
+  padding-right: 32px;
+  border: 1px solid var(--customers-border-color);
+  border-radius: 4px;
+} 
+.customers-img:hover {
+  color: var(--accent-text-color);
+}
+.customers-img:last-child {
+  margin-right:0;
+}
+.logo-customers{
+  color: var(--customers-border-color);
+}
+.logo-customers:hover{
+  color: var(--accent-text-color);
+}
 /*Низ*/
 .footer-bg {
   background-color: var(--footer-bg-color);
